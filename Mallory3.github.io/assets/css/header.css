@@ -1,0 +1,206 @@
+/* - - - - - - - - - - - - - - - - - - - - - - - - 
+HEADER
+- - - - - - - - - - - - - - - - - - - - - - - - */
+header {
+  height: 100px;
+  background:black;
+  opacity: 1;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+header nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+}
+
+header .logo {
+  height: 40px;
+  width: 40px;
+  margin: 1em;
+}
+
+header .menu {
+  display: none;
+}
+
+header .close {
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+  display: none;
+}
+
+header ul {
+  margin: 0;
+  margin-right: 2em;
+  padding: 0;
+  display: flex;
+  width: 500px;
+  justify-content: space-around;
+}
+
+header li {
+  color: white;
+  list-style: none;
+  margin: 0;
+ 
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(0, 0, 0);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  padding: .5em;
+  margin: auto;
+  margin-right: .4em;
+  margin-bottom: 1em;
+  margin-top: .5em;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #e73e38, #ff4800, #ffd900, #19583e, #00ffd5, #035c72, #5f37ee, #ff00c8, #f33e27);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@media(max-width: 850px) {
+  header ul {
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    right: -355px;
+    width: 300px;
+    height: 70vh;
+    border-bottom-left-radius: 10px;
+    background:#000000;
+    transition: transform 0.2s; 
+    transform: translateX(0px); 
+    z-index: 100;
+  }
+
+  header .menu {
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 2em;
+  }
+
+  header .close {
+    display:block;
+    position: fixed;
+    top: 1em;
+    bottom: 0;
+    right: 2em;
+  }
+  
+  .openState {
+    transform: translateX(-320px); 
+    transition: transform 0.4s; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    justify-content: start; 
+    padding-top: 2em;
+    padding-left: 2em;
+    z-index: 100;
+  }
+
+  .openState a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 100;
+  }
+
+  .closedState a {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .openState ul {
+    margin-top: 2em;
+  }
+
+  header li {
+    color: white;
+    text-decoration: none;
+    padding: .5em;
+  }
+
+  .closedState {
+    transform: translateX(0px);
+    transition: transform 0.4s; 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+    justify-content: start; 
+    padding-top: 2em;
+    padding-left: 2em;    
+    }
+}

@@ -1,0 +1,79 @@
+
+
+.smooth {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  scroll-snap-align: center;
+}
+
+section:nth-child(2) {
+  background-color: black;
+}
+section:nth-child(3) {
+  background-color: blue;
+}
+section:nth-child(4) {
+  background-color: red;
+}
+
+/*Hero*/
+
+#hero {
+  width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+#heroTitle {
+  color: white;
+  font-size: 5ch;
+  display: block;
+  text-align: center;
+  position: absolute;
+  bottom: 45%;
+  margin: 0.5em;
+} 
+
+/* #herolayer {
+  background-color: black;
+  opacity: 0.5;
+  min-height: 100vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0%;
+  margin: 0;
+} */
+
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: black; /* Red */
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: black; /* Yellow */
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: black; /* Blue */
+  }
+}
