@@ -17,7 +17,13 @@ header nav .wrapper {
   height: 100px;
 }
 
-header .logo {
+/* header .logo {
+  max-height: 2em;
+  max-width: 2em;
+  margin: 1em;
+} */
+
+#logo {
   max-height: 2em;
   max-width: 2em;
   margin: 1em;
@@ -54,7 +60,7 @@ header a {
   color: white;
   text-decoration: none;
   font-family: 'Quicksand', sans-serif;
-  font-size: 25px;
+  font-size: 1.5em;
 }
 
 header a:hover {
@@ -90,9 +96,9 @@ header a:hover {
   filter: blur(5px);
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
+  animation: glowing 25s linear infinite;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity .5s ease-in-out;
   border-radius: 10px;
 }
 
@@ -129,12 +135,12 @@ header a:hover {
 @media(max-width: 850px) {
   header ul {
     position: fixed; 
-    top: 0;
+    top: 25px;
     bottom: 0;
     right: -355px;
-    width: 300px;
-    height: 70vh;
-    border-bottom-left-radius: 10px;
+    width: 200px;
+    height: 55vh;
+    border-bottom-left-radius: 30px;
     background:#000000;
     transition: transform 0.2s; 
     transform: translateX(0px); 
@@ -146,14 +152,17 @@ header a:hover {
     height: 30px;
     width: 30px;
     margin: 2em;
+    /* color: #ffeb97; */
   }
 
   header .close {
     display:block;
     position: fixed;
-    top: 1em;
+    min-height: 2em;
+    min-width: 2em;
+    top: .5em;
     bottom: 0;
-    right: 2em;
+    right: 2.2em;
   }
   
   .openState {
@@ -161,15 +170,17 @@ header a:hover {
     transition: transform 0.4s; 
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    text-align: left;
-    justify-content: start; 
+    /* flex-direction: column; */
+    text-align: center;
+    justify-content: space-evenly; 
     padding-top: 2em;
     padding-left: 2em;
     z-index: 100;
+
   }
 
   .openState a {
+    color: #ffeb97;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -177,6 +188,7 @@ header a:hover {
   }
 
   .closedState a {
+    color: #ffeb97;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -194,7 +206,7 @@ header a:hover {
 
   .closedState {
     transform: translateX(0px);
-    transition: transform 0.4s; 
+    transition: transform 2s; 
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

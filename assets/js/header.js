@@ -1,3 +1,5 @@
+
+
 const menuAppear = document.querySelector(".menu")
 const onClick = document.querySelector('.navMenu')
 menuAppear.addEventListener('click', function() {

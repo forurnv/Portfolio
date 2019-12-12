@@ -3,9 +3,9 @@ footer {
   position: absolute;
   bottom: 0;
 	color: white;
-	height:150px;
+	height:100px;
 	width:100%;
-	padding-top: .5em;
+	/* padding-top: .5em; */
 	padding-bottom: 1em;
 	text-align: center;
 	display: grid;
